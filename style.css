@@ -108,16 +108,22 @@ body {
     padding: 50px 0;
     font-size: 12px;
     color: #999;
-}
+}/* This forces the PayPal wrapper to the center */
 .paypal-centering-box {
-    display: flex;          /* Activates Flexbox */
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically if needed */
-    width: 100%;            /* Spans full width of page */
-    margin: 40px 0;         /* Space above and below */
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 40px auto !important;
 }
 
+/* This targets the internal PayPal iframe container */
 #paypal-container-J5G5M6F57P6DY {
-    width: 100%;
-    max-width: 500px;       /* Keeps the box from getting too wide */
+    display: inline-block !important; /* Forces it to act like text so it obeys text-align: center */
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+/* This forces the actual button inside the container to center */
+#paypal-container-J5G5M6F57P6DY div {
+    margin: 0 auto !important;
 }
