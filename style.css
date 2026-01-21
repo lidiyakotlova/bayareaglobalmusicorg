@@ -109,3 +109,15 @@ body {
     font-size: 12px;
     color: #999;
 }
+.paypal-centering-box {
+    display: flex;          /* Activates Flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically if needed */
+    width: 100%;            /* Spans full width of page */
+    margin: 40px 0;         /* Space above and below */
+}
+
+#paypal-container-J5G5M6F57P6DY {
+    width: 100%;
+    max-width: 500px;       /* Keeps the box from getting too wide */
+}
