@@ -112,25 +112,22 @@ body {
 
 
 
-
-/* 1. The wrapper forces everything to the middle of the screen */
 .paypal-centering-box {
+    width: 100% !important;
     display: flex !important;
     justify-content: center !important;
-    width: 100% !important;
-    margin: 40px 0 !important;
+    margin: 50px 0 !important;
+}
+
+#paypal-container-J5G5M6F57P6DY {
+    /* This forces the button to be 300px wide so text can't wrap */
+    width: 300px !important; 
+    min-width: 300px !important;
     text-align: center !important;
 }
 
-/* 2. The container allows the button to be its natural size */
-#paypal-container-J5G5M6F57P6DY {
-    width: auto !important;      /* Removes the "squish" */
-    min-width: 300px !important;  /* Ensures it's wide enough for the text */
-    max-width: 100% !important;   /* Prevents it from breaking on mobile */
-    display: block !important;
-}
-
-/* 3. Ensures the internal PayPal elements don't wrap the text */
-#paypal-container-J5G5M6F57P6DY * {
-    white-space: nowrap !important; /* Forces the "Register" text to stay on one line */
+/* Forces the inner PayPal iframe to stop squishing */
+#paypal-container-J5G5M6F57P6DY iframe {
+    width: 300px !important;
+    min-width: 300px !important;
 }
